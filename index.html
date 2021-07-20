@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main container">
+        <header class="main__header">
+            <h1 class="main__title">TODO</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+        </header>
+        <article class="main__panel">
+            <input class="main__input rect-elem rect-elem--input" type="text" placeholder="Crear nueva tarea...">
+            <div class="todos">
+            </div>
+            <div class="rect-elem todos__elem space-b">
+                <p>N elementos <br> restantes</p>
+                <p>Limiar hechos</p>
+            </div>
+            <nav class="nav rect-elem todos__elem space-b">
+                <label for="todo">
+                    <input class="nav__radio" type="radio" name="orden" value="todo" id="todo" checked>
+                    <span class="nav__title">Todo</span>
+                </label>
+                <label for="pendiente">
+                    <input class="nav__radio" type="radio" name="orden" value="pendiente" id="pendiente">
+                    <span class="nav__title">Pendiente</span>
+                </label>
+                <label for="hecho">
+                    <input class="nav__radio" type="radio" name="orden" value="hecho" id="hecho">
+                    <span class="nav__title">Hecho</span>
+                </label>
+            </nav>
+        </article>
+        <footer class="footer">
+            <h2 class="footer__title">Arrastra y suelta para ordenar tus tareas</h2>
+        </footer>
+    </main>
+    <template id="temp-todo">
+        <label class="todos__elem space-b rect-elem">
+            <div>
+                <input class="todos__check" type="checkbox">
+                <span class="todos__title"></span>
+            </div>
+            <img class="todos__close" src="assets/images/icon-cross.svg">
+        </label>
+    </template>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
